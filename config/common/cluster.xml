@@ -1,0 +1,46 @@
+<yandex>
+    <remote_servers replace="replace">
+        <ck_cluster>
+            <shard>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>clickhouse-01</host>
+                    <port>9027</port>
+                </replica>
+            </shard>
+            <shard>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>clickhouse-02</host>
+                    <port>9027</port>
+                </replica>
+            </shard>
+            <shard>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>clickhouse-03</host>
+                    <port>9027</port>
+                </replica>
+            </shard>
+        </ck_cluster>
+    </remote_servers>
+
+    <zookeeper replace="replace">
+        <node index="1">
+            <host>zookeeper-01</host>
+            <port>2181</port>
+        </node>
+        <node index="2">
+            <host>zookeeper-02</host>
+            <port>2181</port>
+        </node>
+        <node index="3">
+            <host>zookeeper-03</host>
+            <port>2181</port>
+        </node>
+    </zookeeper>
+
+    <distributed_ddl>
+        <path>/clickhouse/task_queue/ddl</path>
+    </distributed_ddl>
+</yandex>

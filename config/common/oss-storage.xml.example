@@ -1,0 +1,26 @@
+<yandex>
+    <storage_configuration>
+        <disks>
+            <OSS>
+                <type>s3</type>
+                <endpoint>https://YOUR_BUCKET.oss-cn-beijing.aliyuncs.com/clickhouse/</endpoint>
+                <access_key_id>REPLACE_WITH_ACCESS_KEY_ID</access_key_id>
+                <secret_access_key>REPLACE_WITH_SECRET_ACCESS_KEY</secret_access_key>
+            </OSS>
+        </disks>
+        <policies>
+            <OSS>
+                <volumes>
+                    <main>
+                        <disk>OSS</disk>
+                    </main>
+                </volumes>
+            </OSS>
+        </policies>
+    </storage_configuration>
+    <openSSL>
+        <client>
+            <caConfig>/etc/ssl/certs/ca-certificates.crt</caConfig>
+        </client>
+    </openSSL>
+</yandex>
