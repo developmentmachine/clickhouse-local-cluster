@@ -1,6 +1,6 @@
 # ClickHouse 本地三分片集群
 
-该目录根据飞书知识库中的“Clickhouse 集群部署”及其子文档整理，部署结构为：
+该目录提供一套适用于本地 Docker 环境的 ClickHouse 集群部署，结构为：
 
 - ClickHouse `22.3.2.2` LTS（三个节点、三个分片、每分片一个副本）
 - ZooKeeper `3.8.4`（三个节点）
